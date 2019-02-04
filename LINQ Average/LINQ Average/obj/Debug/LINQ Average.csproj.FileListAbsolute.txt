@@ -1,0 +1,6 @@
+C:\Users\albertorodriguez\source\repos\LINQ Average\LINQ Average\bin\Debug\LINQ Average.exe.config
+C:\Users\albertorodriguez\source\repos\LINQ Average\LINQ Average\bin\Debug\LINQ Average.exe
+C:\Users\albertorodriguez\source\repos\LINQ Average\LINQ Average\bin\Debug\LINQ Average.pdb
+C:\Users\albertorodriguez\source\repos\LINQ Average\LINQ Average\obj\Debug\LINQ Average.csproj.CoreCompileInputs.cache
+C:\Users\albertorodriguez\source\repos\LINQ Average\LINQ Average\obj\Debug\LINQ Average.exe
+C:\Users\albertorodriguez\source\repos\LINQ Average\LINQ Average\obj\Debug\LINQ Average.pdb
