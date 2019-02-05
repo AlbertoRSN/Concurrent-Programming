@@ -1,6 +1,8 @@
 # Concurrent Programming Examples
 
 * LINQAverage.cs - First example of LINQ to calculate the average of different countries student's marks.
+	*  The output is:
+	![Output Image](LinqAverage/output.png)
 
 * Perfect Numbers (2 Versions) - Program to calculate perfect numbers
 	*  PerfectNumbersParallel.cs - with parallel for
