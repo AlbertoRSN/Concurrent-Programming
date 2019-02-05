@@ -1,4 +1,6 @@
 # Concurrent Programming Examples
+##Some examples with Threads, Linq, parallel for and some parallel stuffs.
+
 
 * [THREADS](Threads/) - 2 Versions using Threads
 	*  CreatingThreads.cs - Creating diffent threads
