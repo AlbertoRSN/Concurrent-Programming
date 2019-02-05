@@ -12,5 +12,5 @@
 
 * 
 
-![OutputParallelVSNormalLoop](ParallelVSNormalLoop/output.jpg)
+![Output Image](ParallelVSNormalLoop/output.png)
 
