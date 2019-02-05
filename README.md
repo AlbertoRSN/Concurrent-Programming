@@ -10,3 +10,7 @@
 
 * ThreadsJoin.cs - Program to create different threads using Join
 
+* 
+
+![OutputParallelVSNormalLoop](ParallelVSNormalLoop/output.jpg)
+
