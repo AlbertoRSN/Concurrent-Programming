@@ -10,7 +10,8 @@
 
 * ThreadsJoin.cs - Program to create different threads using Join
 
-* 
-
-![Output Image](ParallelVSNormalLoop/output.png)
+* Parallel VS Normal Loop
+	*  Program with two loops, one parallel loop and the other one normal loop. As we can see in the output, in my computer the result is:
+			![Output Image](ParallelVSNormalLoop/output.png)
+	
 
