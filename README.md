@@ -1,6 +1,6 @@
 # Concurrent Programming Examples
 
-* Threads/ - 2 Versions using Threads
+* [THREADS](Threads/) - 2 Versions using Threads
 	*  CreatingThreads.cs - Creating diffent threads
 	*  ThreadsJoin.cs - Program to create different threads using Join
 
