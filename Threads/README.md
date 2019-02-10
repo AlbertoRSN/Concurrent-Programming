@@ -35,9 +35,47 @@ using System.Threading;
 
 ```
 
+### JOIN Method C#
+
+In the example *ThreadsJoin.cs* we have used Join() method provided by the thread class. It is a **blocking mechanism** which allows one thread to wait until another thread completes its execution. In our case, for example t3 is a Thread object whose thread is currently executing, then t3.Join() causes the current thread to pause its execution until thread it joins completes its execution.
+
+```c#
+    static void Main()
+    {
+        string start = DateTime.Now.ToString("HH:mm:ss tt");
+        string stop;
+        Console.WriteLine(start);
+
+        Go(50, "0--> ");
+
+        Thread t = new Thread(() => Go(40, "1--> "));
+        t.Start();
+
+        Thread t2 = new Thread(() => Go(40, "2--> "));
+        t2.Start();
+
+
+        Thread t3 = new Thread(() => Go(40, "3--> "));
+        t3.Start();
+        t3.Join();
+
+        Thread t4 = new Thread(() => Print(DateTime.Now.ToString("HH:mm:ss tt")));
+        t4.Start();
+
+        Console.ReadKey();
+    }
+```
+
+
+
 The **output** of the program *CreatingThreads.cs* :
 
 ![output](imgs/output.png)
+
+
+The **output** of the program *ThreadsJoin.cs* :
+
+![output](imgs/output2.png)
 
 
 **Information Source:**
@@ -45,3 +83,5 @@ The **output** of the program *CreatingThreads.cs* :
 *[https://www.tutorialspoint.com/](https://www.tutorialspoint.com/csharp/csharp_multithreading.htm)*
 
 *[https://www.dotnetforall.com/](https://www.dotnetforall.com/multithreading-in-csharp-basics/)*
+
+*[*[https://www.dotnetforall.com/](](cjoining-threads-in-c-sharp/)*
