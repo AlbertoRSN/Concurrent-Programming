@@ -10,8 +10,6 @@ class ThreadTest
         string stop;
         Console.WriteLine(start);
 
-
-
         Go(50, "0--> ");
 
         Thread t = new Thread(() => Go(40, "1--> "));
