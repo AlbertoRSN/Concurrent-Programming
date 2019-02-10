@@ -46,16 +46,16 @@ In the example *ThreadsJoin.cs* we have used Join() method provided by the threa
         string stop;
         Console.WriteLine(start);
 
-        Go(50, "0--> ");
+        Go(5, "0--> ");
 
-        Thread t = new Thread(() => Go(40, "1--> "));
+        Thread t = new Thread(() => Go(2, "1--> "));
         t.Start();
 
-        Thread t2 = new Thread(() => Go(40, "2--> "));
+        Thread t2 = new Thread(() => Go(3, "2--> "));
         t2.Start();
 
 
-        Thread t3 = new Thread(() => Go(40, "3--> "));
+        Thread t3 = new Thread(() => Go(4, "3--> "));
         t3.Start();
         t3.Join();
 
@@ -84,4 +84,4 @@ The **output** of the program *ThreadsJoin.cs* :
 
 *[https://www.dotnetforall.com/](https://www.dotnetforall.com/multithreading-in-csharp-basics/)*
 
-*[https://www.dotnetforall.com/](https://www.geeksforgeeks.org/joining-threads-in-c-sharp/)*
+*[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/joining-threads-in-c-sharp/)*
