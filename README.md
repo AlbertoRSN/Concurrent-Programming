@@ -17,5 +17,5 @@
 
 * [Linq Average](LinqAverage/)
 	*  LINQAverage.cs - example of LINQ to calculate the average of different countries student's marks.
-	*  Output: [Linq Average](LinqAverage/imgs/output.ong)
+	*  [Linq Average Output](LinqAverage/imgs/output.png)
 
