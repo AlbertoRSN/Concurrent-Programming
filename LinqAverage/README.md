@@ -33,6 +33,9 @@ List<Student> students = new List<Student>() {
 ```
 
 
+
+
+
 **QUERY CREATION**
 
 ```c#
@@ -57,4 +60,11 @@ var result2 = from s in students
                 Console.WriteLine("{0} \t  {1} \t {2}", s.Name, s.Faculty, s.Marks);
         }
 ````
-	
+
+
+
+
+The **output** of the program *LINQAverage.cs* :
+
+![output](imgs/output.png)
+
