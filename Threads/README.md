@@ -12,7 +12,7 @@ A thread is defined as the execution path of a program. Each thread defines a un
 
 
 
-### **Starting a thread in C#**
+### Starting a thread in C#
 
 We can start a thread in C# by using the Thread class present under the System.Thread namespace in the following way.
 
@@ -35,7 +35,7 @@ using System.Threading;
 
 ```
 
-The **output** of the program *CreatingThreads.cs*:
+The **output** of the program *CreatingThreads.cs* :
 
 ![output](imgs/output.png)
 
