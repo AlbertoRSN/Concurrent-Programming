@@ -18,6 +18,11 @@
 	*  ThreadsJoin.cs - Program to create different threads using Join
 
 
+**All the examples have been executed in a notebook with the following specifications:**
+
+![Specifications](specifications.png)
+
+
 
 
 
