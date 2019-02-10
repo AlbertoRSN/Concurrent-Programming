@@ -1,6 +1,7 @@
 # LINQ QUERIES IN C#
 
 Linq query consist of three distinct actions:
+	
 	1. **Obtain the data source**
 	2. **Create the query**
 	3. **Execute the query**
