@@ -5,12 +5,15 @@
 A thread is defined as the execution path of a program. Each thread defines a unique flow of control. If your application involves complicated and time consuming operations, then it is often helpful to set different execution paths or threads, with each thread performing a particular job.
 
 
+
 ![thread](imgs/NewThread.png)
     
 
 
 
-**Starting a thread in C#**
+
+###**Starting a thread in C#**
+
 We can start a thread in C# by using the Thread class present under the System.Thread namespace in the following way.
 
 
@@ -32,7 +35,7 @@ using System.Threading;
 
 ```
 
-The output of the program CreatingThreads.cs:
+The **output** of the program CreatingThreads.cs:
 
 ![output](imgs/output.png)
 
@@ -40,4 +43,5 @@ The output of the program CreatingThreads.cs:
 **Information Source:**
 
 *[https://www.tutorialspoint.com/](https://www.tutorialspoint.com/csharp/csharp_multithreading.htm)*
+
 *[https://www.dotnetforall.com/](https://www.dotnetforall.com/multithreading-in-csharp-basics/)*
