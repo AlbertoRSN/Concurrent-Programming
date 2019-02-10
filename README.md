@@ -6,12 +6,6 @@
 	*  CreatingThreads.cs - Creating diffent threads
 	*  ThreadsJoin.cs - Program to create different threads using Join
 
-* [Linq Average](LinqAverage/)
-	*  LINQAverage.cs - example of LINQ to calculate the average of different countries student's marks.
-	*  Output:
-
-	![Output Image](LinqAverage/imgs/output.png)
-
 * [Perfect Numbers](PerfectNumbers/) (2 Versions) - Program to calculate perfect numbers
 	*  PerfectNumbersParallel.cs - with parallel for
 	*  PerfectNumbersThreads.cs - With different threads
@@ -21,4 +15,8 @@
 			
 	![Output Image](ParallelVSNormalLoop/output.png)
 
+* [Linq Average](LinqAverage/)
+	*  LINQAverage.cs - example of LINQ to calculate the average of different countries student's marks.
+	*  Output:
 
+	![Output Image](LinqAverage/imgs/output.png)
