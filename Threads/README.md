@@ -84,4 +84,4 @@ The **output** of the program *ThreadsJoin.cs* :
 
 *[https://www.dotnetforall.com/](https://www.dotnetforall.com/multithreading-in-csharp-basics/)*
 
-*[*[https://www.dotnetforall.com/](](cjoining-threads-in-c-sharp/)*
+*[https://www.dotnetforall.com/](](cjoining-threads-in-c-sharp/)*
