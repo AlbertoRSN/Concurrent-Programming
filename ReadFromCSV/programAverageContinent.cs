@@ -15,12 +15,12 @@ class CoutriesOfTheWorld
 
       IEnumerable<Country> Countries = GetCountries();
         Console.WriteLine("The number of countries: {0}", Countries.Count());  
-        Console.WriteLine("------------------------------------------------------------------------");
-        //Console.WriteLine(String.Format("{0, -25} {1, 15:n0} {2, 15:n0} {3, 10:n1}", "Country", "Population", "Area", "Density"));   
-        Console.WriteLine("------------------------------------------------------------------------");
+        Console.WriteLine("--------------------------------------------------------------");
+        Console.WriteLine(String.Format("{0, -15} {1, 35} ", "Country", "Average Population"));   
+        Console.WriteLine("--------------------------------------------------------------");
 
         var result2 = from c in Countries
-                      orderby c.Name
+                      orderby c.Continent
                       group c by c.Continent into groups
                       select new{
                         Continent = groups.Key,
@@ -35,7 +35,7 @@ class CoutriesOfTheWorld
         }
 
 
-        Console.WriteLine("------------------------------------------------------------------------");
+        Console.WriteLine("--------------------------------------------------------------");
 
 
     }

@@ -5,7 +5,7 @@
 * **How to compile?**
 
 ```cmd
-c:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe *.cs
+c:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe "nameofprogram".cs
 ```
 	
 
@@ -21,7 +21,7 @@ Where "Europe" is the continent about you want to display the information, on th
 
 The **output** is:
 
-![OutputProgram](imgs/output1.png)
+![OutputProgram1](imgs/output1.png)
 
 
 
@@ -33,6 +33,9 @@ The **output** is:
 programAverageContinent.exe 
 ```
 
+The **output** is:
+
+![OutputProgram2](imgs/output2.png)
 
 ## programSumContinent.cs
 
@@ -43,8 +46,5 @@ programSumContinent.exe
 ```
 
 
-
-
-The **output** of the program *LINQAverage.cs* :
 
 
