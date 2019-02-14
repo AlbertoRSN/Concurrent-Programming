@@ -1,42 +1,50 @@
-## How to read data from CSV file
+# Read data from CSV file
+
+
+
+* **How to compile?**
+
+```cmd
+c:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe *.cs
+```
 	
-1. **Obtain the data source**
-2. **Create the query**
-3. **Execute the query**
 
-	![query](imgs/linq_query.png)
+## program.cs
 
-More information about Linq Queries [here](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)
+* **How to run the program?**
+
+```cmd
+program.exe Europe 90
+```
+
+Where "Europe" is the continent about you want to display the information, on this case, only countries with bigger density than "90".
+
+The **output** is:
+
+![OutputProgram](imgs/output1.png)
 
 
 
-**DATA SOURCE**
+## programAverageContinent.cs
 
-```c#
+* **How to run the program?**
 
+```cmd
+programAverageContinent.exe 
+```
+
+
+## programSumContinent.cs
+
+* **How to run the program?**
+
+```cmd
+programSumContinent.exe 
 ```
 
 
 
 
-
-**QUERY CREATION**
-
-```c#
-
-````
-
-
-
-
-**QUERY EXECUTION**
-
-```c#
-
-````
-
-
 The **output** of the program *LINQAverage.cs* :
 
-![output](imgs/output.png)
 

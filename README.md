@@ -13,6 +13,11 @@
 	*  *PerfectNumbersParallel.cs* - with parallel for
 	*  *PerfectNumbersThreads.cs* - With different threads
 
+* [Read From CSV](ReadFromCSV/) - Program in C# for read data from CSV file
+	*  *program.cs* - Display some information about the continent that you choose
+	*  *programAverageContinent.cs* - Display the average poblation of the continent that you want.
+	*  *programSumContinent.cs* - Display the total poblation of the world and sum per continent.
+
 * [THREADS](Threads/) - 2 Versions using Threads
 	*  *CreatingThreads.cs* - Creating diffent threads
 	*  *ThreadsJoin.cs* - Program to create different threads using Join
