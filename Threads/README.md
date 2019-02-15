@@ -80,7 +80,7 @@ The **output** of the program *ThreadsJoin.cs* :
 
 
 
-###Key Differences Between Multitasking and Multithreading
+### Key Differences Between Multitasking and Multithreading
 
 1. The basic difference between multitasking and multithreading is that in multitasking, the system allows executing multiple programs and tasks at the same time.  
 2. In multithreading, the system executes multiple threads of the same or different processes at the same time.  
