@@ -65,8 +65,8 @@ The **output** is:
 ![output1](imgs/output1.png)
 
 As we can see in the **output**, in my computer the time to calculate perfect number using **normal loop** is **lower** than using **parallel for**  
-It can be explained:
-####*[Potential Pitfalls in Data and Task Parallelism: ](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism)*Do Not Assume That Parallel Is Always Faster
+It can be explained:  
+#### [Potential Pitfalls in Data and Task Parallelism: ](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism) Do Not Assume That Parallel Is Always Faster
 
 > In certain cases a **parallel loop might run slower than its sequential equivalent**. The basic rule of thumb is that parallel loops that have few iterations and fast user delegates are unlikely to speedup much. However, because many factors are involved in performance, we recommend that you always measure actual results.
 
