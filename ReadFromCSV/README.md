@@ -45,7 +45,7 @@ Where "Europe" is the continent about you want to display the information, on th
         }  
 ```
 
-**With the function *GetCountries* we read the information from csv file**
+**With the method *GetCountries* we read the information from csv file**
 
 ```c#
 public static IEnumerable<Country> GetCountries()
