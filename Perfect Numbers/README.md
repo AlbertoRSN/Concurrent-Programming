@@ -1,34 +1,89 @@
-# Concurrent Programming Examples
-## Some examples with Threads, Linq, parallel for and some parallel stuffs.
+# Perfect Number (Parallel vs Tasks)
 
-* [Linq Average](LinqAverage/)
-	*  *LINQAverage.cs* - example of LINQ to calculate the average of different countries student's marks.
-	*  [Linq Average Output (img)](LinqAverage/imgs/output.png)
+### What is "Perfect Number"?
 
-* [Parallel VS Normal Loop](ParallelVSNormalLoop/)
-	*  *ParallelVSNormal.cs* - Program with two loops, one parallel loop and the other one normal loop. As we can see in the output, in my computer the result is:
-	*  [Output Image](ParallelVSNormalLoop/output.png)
-
-* [Perfect Numbers](PerfectNumbers/) (2 Versions) - Program to calculate perfect numbers
-	*  *PerfectNumbersParallel.cs* - with parallel for
-	*  *PerfectNumbersThreads.cs* - With different threads
-
-* [Read From CSV](ReadFromCSV/) - Program in C# for read data from CSV file
-	*  *program.cs* - Display some information about the continent that you choose
-	*  *programAverageContinent.cs* - Display the average poblation of the continent that you want.
-	*  *programSumContinent.cs* - Display the total poblation of the world and sum per continent.
-
-* [THREADS](Threads/) - 2 Versions using Threads
-	*  *CreatingThreads.cs* - Creating diffent threads
-	*  *ThreadsJoin.cs* - Program to create different threads using Join
+Perfect number is a positive integer that is equal to the sum of its proper divisors.  
+The smallest perfect number is 6, which is the sum of 1, 2, and 3.  
+Other perfect numbers are 28, 496, and 8,128.
 
 
-**All the examples have been executed in a PC with the following specifications:**
+### PerfectNumberParallel.cs
 
-![Specifications](specifications.png)
+**Method to Calculate Perfect number with** *Normal For* 
+
+```c#
+ static bool PerfectNumbers(long n)
+    {
+        long s = 0;
+        for (int i = 1; i <= n / 2 + 1; i++)
+        {
+            if (n % i == 0)
+            {
+                s += i;
+            }
+        }
+        if (n == s) return true;
+        else return false;
+    }
+```
+
+**Method where we call perfect number function some times**  
+To calculate the time from the beginning we use **StopWatch** from namespace 
+**[System.Diagnostics](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics?view=netframework-4.7.2)**
+
+
+```c#
+    static void GoPerfect(int a, int b, string m)
+    {
+        Stopwatch sw = Stopwatch.StartNew();
+
+        Console.WriteLine(m + " - {0:f2} s", sw.Elapsed.TotalSeconds);
+
+        for (int i = a; i <= b; i++)
+        {
+            if (PerfectNumbers(i))
+            {
+                Console.WriteLine(m + " - " + i);
+            }
+        }
+        Console.WriteLine(m + " - {0:f2} s", sw.Elapsed.TotalSeconds);
+    }
+
+```
+
+We call the method **GoPerfect** in main:
+
+```c#
+        GoPerfect(1, 50000, "Normal Loop");
+```
+
+
+The **output** is:
+
+![output1](imgs/output1.png)
+
+As we can see in the **output**, in my computer the time to calculate perfect number using **normal loop** is **lower** than using **parallel for**  
+It can be explained:
+#### *[Potential Pitfalls in Data and Task Parallelism: ](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism)*Do Not Assume That Parallel Is Always Faster
+
+> In certain cases a **parallel loop might run slower than its sequential equivalent**. The basic rule of thumb is that parallel loops that have few iterations and fast user delegates are unlikely to speedup much. However, because many factors are involved in performance, we recommend that you always measure actual results.
 
 
 
+
+
+### PerfectNumberTasks.cs
+
+
+
+
+
+
+
+
+
+**To Consider:**
+ This program is running on a virtual machine, so it also influences the execution time of it.
 
 
 
