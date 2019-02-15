@@ -78,7 +78,9 @@ It can be explained:
 
 
 
+The **output** is:
 
+![output2](imgs/output2.png)
 
 
 
