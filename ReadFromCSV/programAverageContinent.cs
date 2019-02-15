@@ -13,18 +13,20 @@ class CoutriesOfTheWorld
     public static void Main()
     {
 
+      //Get the information from csv file
       IEnumerable<Country> Countries = GetCountries();
         Console.WriteLine("The number of countries: {0}", Countries.Count());  
         Console.WriteLine("--------------------------------------------------------------");
         Console.WriteLine(String.Format("{0, -15} {1, 35} ", "Country", "Average Population"));   
         Console.WriteLine("--------------------------------------------------------------");
 
+        //Linq query to choose only the continents and group them to calculate the population average
         var result2 = from c in Countries
                       orderby c.Continent
                       group c by c.Continent into groups
                       select new{
                         Continent = groups.Key,
-                        AveragePopulation = groups.Average(c => c.Population),
+                        AveragePopulation = groups.Average(c => c.Population), //Calculation of propulation average
                       };
 
         foreach (var cont in result2)
