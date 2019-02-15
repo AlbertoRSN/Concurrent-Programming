@@ -64,7 +64,7 @@ The **output** is:
 
 ![output1](imgs/output1.png)
 
-As we can see in the **output**, in my computer the time to calculate perfect number using **normal loop** is **lower** than using **parallel for**  
+As we can see in the **output**, in my computer the time to calculate perfect number using **multitasks** is **lower** than using **Parallel for**  
 It can be explained:  
 #### [Potential Pitfalls in Data and Task Parallelism: ](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism) Do Not Assume That Parallel Is Always Faster
 
