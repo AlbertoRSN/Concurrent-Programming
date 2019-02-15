@@ -78,6 +78,19 @@ The **output** of the program *ThreadsJoin.cs* :
 ![output](imgs/output2.png)
 
 
+
+
+###Key Differences Between Multitasking and Multithreading
+
+1. The basic difference between multitasking and multithreading is that in multitasking, the system allows executing multiple programs and tasks at the same time.  
+2. In multithreading, the system executes multiple threads of the same or different processes at the same time.  
+In multitasking CPU has to switch between multiple programs so that it appears that multiple programs are running simultaneously.  
+On other hands, in multithreading CPU has to switch between multiple threads to make it appear that all threads are running simultaneously.
+3. Multitasking allocates separate memory and resources for each process/program whereas, in multithreading threads belonging to the same process shares the same memory and resources as that of the process.
+
+
+
+
 **Information Source:**
 
 *[https://www.tutorialspoint.com/](https://www.tutorialspoint.com/csharp/csharp_multithreading.htm)*
@@ -85,3 +98,5 @@ The **output** of the program *ThreadsJoin.cs* :
 *[https://www.dotnetforall.com/](https://www.dotnetforall.com/multithreading-in-csharp-basics/)*
 
 *[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/joining-threads-in-c-sharp/)*
+
+*[https://www.quora.com/](https://www.quora.com/What-is-difference-between-multithreading-and-multitasking)*
