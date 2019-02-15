@@ -76,7 +76,11 @@ It can be explained:
 
 ### PerfectNumberTasks.cs
 
+**Total Time** for main thread: 22,71s
 
+**Total Time** for different threads: 25,57s
+
+Finally get **lower** time with main thread, than different tasks.
 
 The **output** is:
 
