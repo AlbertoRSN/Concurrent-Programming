@@ -110,5 +110,9 @@ programSumContinent.exe
 ```
 
 
+The **output** is:
+
+![OutputProgram3](imgs/output3.png)
+
 
 
