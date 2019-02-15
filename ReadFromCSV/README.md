@@ -45,7 +45,7 @@ Where "Europe" is the continent about you want to display the information, on th
         }  
 ```
 
-**With the method *GetCountries* we read the information from csv file**
+With the method **GetCountries** we read the information from csv file
 
 ```c#
 public static IEnumerable<Country> GetCountries()
@@ -70,8 +70,7 @@ public static IEnumerable<Country> GetCountries()
 ```
 
 
-**With method Trim we removes from the current string all leading and trailing white-space characters.**
-
+With method **Trim** we removes from the current string all leading and trailing white-space characters.   
 Here we also **convert** the *String* to *intiger* type and *double*.
 
 ```c#
