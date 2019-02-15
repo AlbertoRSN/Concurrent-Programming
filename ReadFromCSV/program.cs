@@ -13,7 +13,7 @@ class CoutriesOfTheWorld
     public static void Main()
     {
 
-
+        //Allows to run the program with arguments
         String[] args = Environment.GetCommandLineArgs();
         if (args.Length == 1 || args.Length == 2) {
          Console.WriteLine("There are no command line arguments.");
@@ -24,7 +24,7 @@ class CoutriesOfTheWorld
         int theDensity = Int32.Parse(args[2]);
 
 
-
+      //Call method GetCountries to get the complete information
       IEnumerable<Country> Countries = GetCountries();
         Console.WriteLine("The number of countries: {0}", Countries.Count());  
         Console.WriteLine("------------------------------------------------------------------------");
@@ -32,6 +32,7 @@ class CoutriesOfTheWorld
         Console.WriteLine("------------------------------------------------------------------------");
 
 
+        //Linq query to select only the information that we need
         var result = from c in Countries
             where (c.Continent == theContinent) && (c.Population / c.Area > theDensity)
             orderby c.Population/c.Area descending
@@ -57,7 +58,7 @@ class CoutriesOfTheWorld
 
       }
 
-   
+   //Get information from data file
     public static IEnumerable<Country> GetCountries()
     {
         var countries = System.IO.File.ReadAllLines("data.csv");
@@ -68,7 +69,7 @@ class CoutriesOfTheWorld
                 
                 select new Country()
                 {
-                    Name = fields[0].Trim(),
+                    Name = fields[0].Trim(), 
                     Continent = fields[1].Trim(),
                     Population = Convert.ToInt32(fields[2]),
                     Area = Convert.ToInt32(fields[3].Trim()), 
