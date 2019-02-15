@@ -3,7 +3,7 @@ using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
 using System.IO;
-//using System.Text;
+
 
 
 
@@ -45,7 +45,7 @@ class CoutriesOfTheWorld
 
         Console.WriteLine("------------------------------------------------------------------------\n");
 
-        Console.WriteLine(String.Format("{0, -25} {1, 20:n1}", "Continent", "Avg. Population"));   
+        Console.WriteLine(String.Format("{0, -25} {1, 25:n1}", "Continent", "Avg. Population"));   
 
         var result2 = from c in Countries
                       orderby c.Name
@@ -64,18 +64,15 @@ class CoutriesOfTheWorld
                 
         }
 
-        //int totalPopulation = result2.Sum(c => c.Population);
-
 
         Console.WriteLine("------------------------------------------------------------------------");
 
-        //ong totalPerContinent = 0;
 
         var result3 = from c in Countries
                       group c by c.Continent into groups
                       select new{
                         Continent = groups.Key,
-                        TotalPopulation = groups.Average(x => x.Population),
+                        TotalPopulation = groups.Sum(x => x.Population),
                       };
 
         foreach (var co in result3)
@@ -92,7 +89,7 @@ class CoutriesOfTheWorld
       {
           public string Name { get; set; }
           public string Continent { get; set; }
-          public int Population { get; set; }
+          public long Population { get; set; }
           public int Area { get; set; }
           public double Gdp2010 { get; set; } 
 
@@ -111,7 +108,7 @@ class CoutriesOfTheWorld
                 {
                     Name = fields[0].Trim(),
                     Continent = fields[1].Trim(),
-                    Population = Convert.ToInt32(fields[2]),
+                    Population = Convert.ToInt64(fields[2]),
                     Area = Convert.ToInt32(fields[3].Trim()), 
                     Gdp2010 = Convert.ToDouble(fields[6].Trim())
                 });
