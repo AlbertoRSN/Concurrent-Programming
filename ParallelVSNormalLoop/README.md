@@ -1,93 +1,48 @@
 # Parallel Loop VS Normal Loop
 
-### What is "Perfect Number"?
+### Parallel For
 
-Perfect number is a positive integer that is equal to the sum of its proper divisors.  
-The smallest perfect number is 6, which is the sum of 1, 2, and 3.  
-Other perfect numbers are 28, 496, and 8,128.
+A loop iterates over a method call many times. Sometimes, the method calls can be called in a parallel way in any order.
 
-![Perfect](imgs/perfect.png)
+Using parallel calls, we can for example speed up some programs by 4 times on a quad-core processor .  
+This is a big improvement. We can use **Parallel.For** to make this optimization easier.  
+But sometimes (as we will see in this example), we obtain as a result worse time than sequential for.
 
-
-### PerfectNumberParallel.cs
-
-**Method to Calculate Perfect number with** *Normal For* 
-
-```c#
- static bool PerfectNumbers(long n)
-    {
-        long s = 0;
-        for (int i = 1; i <= n / 2 + 1; i++)
-        {
-            if (n % i == 0)
-            {
-                s += i;
-            }
-        }
-        if (n == s) return true;
-        else return false;
-    }
-```
-
-**Method where we call perfect number function some times**  
-To calculate the time from the beginning we use **StopWatch** from namespace 
-**[System.Diagnostics](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics?view=netframework-4.7.2)**
-
-
-```c#
-    static void GoPerfect(int a, int b, string m)
-    {
-        Stopwatch sw = Stopwatch.StartNew();
-
-        Console.WriteLine(m + " - {0:f2} s", sw.Elapsed.TotalSeconds);
-
-        for (int i = a; i <= b; i++)
-        {
-            if (PerfectNumbers(i))
-            {
-                Console.WriteLine(m + " - " + i);
-            }
-        }
-        Console.WriteLine(m + " - {0:f2} s", sw.Elapsed.TotalSeconds);
-    }
-
-```
-
-We call the method **GoPerfect** in main:
-
-```c#
-        GoPerfect(1, 50000, "Normal Loop");
-```
-
-
-The **output** is:
-
-![output1](imgs/output1.png)
-
-As we can see in the **output**, in my computer the time to calculate perfect number using **multitasks** is **lower** than using **Parallel for**  
-It can be explained:  
-#### [Potential Pitfalls in Data and Task Parallelism: ](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism) Do Not Assume That Parallel Is Always Faster
+**[Potential Pitfalls in Data and Task Parallelism: ](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism) Do Not Assume That Parallel Is Always Faster**
 
 > In certain cases a **parallel loop might run slower than its sequential equivalent**. The basic rule of thumb is that parallel loops that have few iterations and fast user delegates are unlikely to speedup much. However, because many factors are involved in performance, we recommend that you always measure actual results.
 
 
 
+### Sequential Loop*
+
+```c#
+    static void Serial(double[] array, double factor)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = array[i] * factor;
+            }
+        }
+```
 
 
-### PerfectNumberTasks.cs
 
-**Total Time** for main thread: 22,71s
 
-**Total Time** for different threads: 25,57s
+### Parallel Loop
 
-Finally get **lower** time with main thread, than different tasks.
+```C#
+        static void ParallelFor(double[] array, double factor)
+        {
+            Parallel.For(
+                0, array.Length, i => { array[i] = array[i] * factor; });
+        }
+```
+
 
 The **output** is:
 
-![output2](imgs/output2.png)
-
-
-
+![output](imgs/output.png)
 
 
 **To Consider:**
