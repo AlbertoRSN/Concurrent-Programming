@@ -9,7 +9,7 @@
 	*  *ParallelVSNormal.cs* - Program with two loops, one parallel loop and the other one normal loop. As we can see in the output, in my computer the result is:
 	*  [Output Image](ParallelVSNormalLoop/output.png)
 
-* [Perfect Numbers](Perfect\ Numbers/) (2 Versions) - Program to calculate perfect numbers
+* [Perfect Numbers](Perfect Numbers/) (2 Versions) - Program to calculate perfect numbers
 	*  *PerfectNumbersParallel.cs* - with parallel for
 	*  *PerfectNumbersThreads.cs* - With different threads
 
